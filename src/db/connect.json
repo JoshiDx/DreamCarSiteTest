@@ -1,0 +1,7 @@
+{
+  "db":"DreamCarMarket",
+  "DBadres":"localhost",
+  "DBport":5432,
+  "DBuser":"postgres",
+  "DBpassword":""
+}
