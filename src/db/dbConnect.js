@@ -9,8 +9,8 @@ const client = new Client({
 });
 
 
-let login = 'P25o';
-let pass = 'Esco2312bar';
+let login = '13';
+let pass = '14';
 let email = 'jopka@p33isy33a.com';
 let firstname = 'dfadfffa44sd';
 
@@ -46,10 +46,10 @@ function Login(login,pass){
         else {
             console.log(date+";Database is OK! status:200")
             console.log(date+";Operation:Login")
-            client.query("SELECT * FROM accounts WHERE login IN ($1) OR pass in($2)",[login,pass])
+            client.query("SELECT * FROM accounts WHERE login IN ($1) AND pass in($2)",[login,pass])
                 .then(response =>{
                     console.log(date+";Request is succesfully!")
-                    console.log(date+";Result:"+client.row)
+                    console.log(date+";Result:"+client.results)
                     client.end(
                         console.log(date+";Session closed!")
                     )
@@ -62,6 +62,4 @@ function Login(login,pass){
     });
 
 }
-
-
 
