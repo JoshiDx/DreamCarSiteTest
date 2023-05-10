@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
+import about from "./about";
 
 class Navbar extends Component {
     render() {
@@ -26,7 +27,7 @@ class Navbar extends Component {
                         </div>
                         <div className={"App-eventIcoBlock"}>
                             <img src={require('../images/heart.png')} className={"App-headerEventIco"} />
-                            <img src={require('../images/userIco.png')} className={"App-headerEventIco"} />
+                            <Link to={"/login"}><img src={require('../images/userIco.png')} className={"App-headerEventIco"} /></Link>
                             <img src={require('../images/cartIco.png')} className={"App-headerEventIco"} />
                         </div>
                     </div>
@@ -39,13 +40,10 @@ class Navbar extends Component {
                             <p className={"App-headerText"}>Сервисы</p>
                         </div>
                         <div className={"App-headerTextAreaBlock"}>
-                            <p className={"App-headerText"}><Link to={"/contacts"} className={"App-headerText"}>Контакты</Link></p>
-                        </div>
-                        <div className={"App-headerTextAreaBlock"}>
                             <p className={"App-headerText"}>Блог</p>
                         </div>
                         <div className={"App-headerTextAreaBlock"}>
-                            <p className={"App-headerText"}>О нас</p>
+                            <p className={"App-headerText"}><Link to={"/about"} className={"App-headerText"}>О нас</Link></p>
                         </div>
                         <div className={"App-headerTextAreaBlock"}>
                             <p className={"App-headerText"}>Стать партнером</p>

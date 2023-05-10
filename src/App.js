@@ -8,7 +8,8 @@ import Home from "./pages/Home";
 import Navbar from "./pages/navbar";
 import catalog from "./pages/catalog";
 import FooterBar from "./pages/footerBar";
-import Contacts from "./pages/contacts";
+import RegestrationLogin from "./pages/regestration-login";
+import About from "./pages/about";
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
           <Routes>
               <Route path={"/"} Component={Home}/>
               <Route path={"catalog"} Component={catalog}/>
-              <Route path={"contacts"} Component={Contacts}/>
+              <Route path={"about"} Component={About}/>
+              <Route path={"login"} Component={RegestrationLogin}/>
           </Routes>
           <FooterBar />
       </BrowserRouter>

@@ -1,3 +1,6 @@
+html{
+  background-color: #F2F2F2;
+}
 .App {
   text-align: center;
 }
@@ -608,10 +611,10 @@
   margin-bottom: -5vh;
 }
 .App-upperFooterContactIco{
-  margin-left: 1vh;
+  margin-left: 1.5vh;
 }
 .App-upperFooterContactIco:first-child{
-  margin-left: 0vh;
+  margin-left: -0.5vh;
 }
 .App-upperFooterEmail{
   font-family: 'Inter', sans-serif;
@@ -633,8 +636,8 @@
   display: flex;
   flex-direction: column;
   margin-left: 4vh;
-  margin-bottom: 5vh;
-  margin-top: 5vh;
+  margin-bottom: 8vh;
+  margin-top: 1.5vh;
 }
 .App-bottomFooterTableTitle{
   font-family: 'Inter', sans-serif;
@@ -643,7 +646,7 @@
   border-bottom: 1px solid white;
 }
 .App-bottomFooterTableText{
-  margin-top: -10px;
+  margin-top: -5px;
   font-family: 'Inter', sans-serif;
   font-size: 13px;
   color: white;
@@ -659,8 +662,6 @@
   margin-left: 20vh;
 }
 .App-upperFooterContactIcos{
-  border: 1px solid white;
-  border-radius: 5px;
   padding: 0.5vh;
 }
 .App-catalogBody{
@@ -752,18 +753,18 @@
 .App-catalogMap{
   display: flex;
   flex-direction: column;
-  margin-left: 50vh;
+  margin-left: 4vh;
   border-radius: 5px;
 }
 .App-catalogMapTitel{
   font-weight: 500;
-  font-size: 60px;
+  font-size: 30px;
 }
 .App-contactsBodyPlates{
   display: flex;
   flex-direction: column;
   margin-left: 5%;
-  margin-top: 14%;
+  margin-top: 6%;
 }
 .App-contactsBodyPlate{
   display: inline-flex;
@@ -776,7 +777,290 @@
 }
 .App-contactsBodyPlateTextTw{
   font-weight: 500;
-  color: rgba(217, 217, 217, 1);
+  color: rgba(20, 20, 20, 0.4);
   font-size: 15px;
   align-self: start;
+}
+.App-regBody{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.App-regPlate{
+  display: flex;
+  flex-direction: column;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  border-radius: 5px;
+  margin-top: 5%;
+  margin-bottom: 11.1%;
+}
+.App-regSelector{
+  display: inline-flex;
+  align-items: start;
+}
+.App-regSelectorText{
+  display: flex;
+  font-weight: 500;
+  font-size: 20px;
+  margin-left: 2vh;
+  margin-top: 2vh;
+}
+.App-regInputs{
+  display: flex;
+  flex-direction: column;
+  margin-left: 2vh;
+  margin-top: 2vh;
+}
+.App-regInputText{
+  width: 30vh;
+  height: 3vh;
+  border-radius: 5px;
+  border: 1px solid rgba(217, 217, 217, 1);
+  margin-right: 2vh;
+}
+.App-regInputText:last-child{
+  margin-top: 2vh;
+}
+.App-regRecov{
+  display: flex;
+  margin-left: 2vh;
+  margin-top: 1vh;
+  font-weight: 500;
+}
+.App-regButton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: black;
+  width: 30.7vh;
+  height: 4vh;
+  margin-left: 2vh;
+  margin-top: 4vh;
+  margin-bottom: 1vh;
+  border-radius: 5px;
+}
+.App-aboutPageMain{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.App-abouPageFirstBlock{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  margin-top: 5vh;
+}
+.App-abouPageFirstBlockTitle{
+  display: flex;
+  font-size: 30px;
+  font-weight: 500;
+}
+.App-aboutFirstBlockPhoto{
+  display: inline-flex;
+}
+.App-aboutFirstBlockPhotoClass{
+  display: flex;
+  width: 500px;
+  height: 450px;
+}
+.App-aboutFirstBlockPhotoClassTw{
+  display: flex;
+  width: 800px;
+  height: 450px;
+  margin-left: 2vh;
+}
+.App-aboutPageTextBlockF{
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: start;
+  background-color: #ECECEC;
+  border-radius: 20px;
+  margin-top: 2vh;
+  width: 69%;
+}
+.App-aboutPageTextBlockF:hover{
+  transition: 2s;
+  box-shadow: 4px 4px 41px 23px rgba(34, 60, 80, 0.2);
+}
+.App-aboutPageTextBlockF:not(:hover){
+  transition: 2s;
+}
+.App-aboutPageTextBlockCert{
+  width: 30%;
+  height:35vh;
+  background-color: #ECECEC;
+  border-radius: 20px;
+}
+.App-aboutPageTextBlockCert:hover{
+  transition: 2s;
+  box-shadow: 4px 4px 41px 23px rgba(34, 60, 80, 0.2);
+}
+.App-aboutPageTextBlockCert:not(:hover){
+  transition: 2s;
+}
+.App-aboutPageTextTitle{
+  display: flex;
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 4vh;
+}
+.App-aboutPageTextBlockBlock{
+  display: flex;
+  flex-direction: column;
+}
+.App-aboutPageTextBlockColumn{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 88%;
+  border-bottom: 1px solid rgba(20, 20, 20, 0.2);
+}
+.App-aboutPageTextBlockColumns{
+  display: inline-flex;
+}
+.App-aboutPageTextBlockColumns:first-child{
+  margin-right: 5%;
+}
+.App-aboutPageTextBlockColumnText{
+  display: flex;
+  width: 30vh;
+  font-weight: 500;
+}
+.App-aboutPageTextBlockColumnTextDesc{
+  display: flex;
+  width: 50vh;
+  margin-left: 2vh;
+  font-weight: 500;
+  color: rgba(20, 20, 20, 0.4);
+}
+.App-aboutPageTextBlockColumn:last-child{
+  border-bottom: none;
+}
+.App-aboutPageContacts{
+  display: inline-flex;
+  width: 69%;
+  margin-bottom: 5vh;
+  border-radius: 20px;
+  padding-bottom: 5vh;
+  margin-top: 2vh;
+  background-color: #ECECEC;
+}
+.App-aboutPageContacts:hover{
+  transition: 2s;
+  box-shadow: 4px 4px 41px 23px rgba(34, 60, 80, 0.2);
+}
+.App-aboutPageContacts:not(:hover){
+  transition: 2s;
+}
+.App-aboutPageBlockCertifcate{
+  display: inline-flex;
+  justify-content: start;
+  align-items: start;
+  width: 69%;
+  margin-top: 2vh;
+}
+.App-aboutPageCertificateCarousel{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1vh;
+  width: 70%;
+  height: 35vh;
+  background-color: #ECECEC;
+  border-radius: 20px;
+}
+.App-aboutPageCertificateCarousel:hover{
+  transition: 2s;
+  box-shadow: 4px 4px 41px 23px rgba(34, 60, 80, 0.2);
+}
+.App-aboutPageCertificateCarousel:not(:hover){
+  transition: 2s;
+}
+.App-aboutCarouselSlide{
+  width: 150px;
+  height: 200px;
+}
+.App-aboutCarouselSlider{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -12vh;
+}
+.App-getPartnerMain{
+  display: inline-flex;
+  align-items: start;
+  justify-content: start;
+}
+@media (max-width: 375px) {
+  .App-headerLogo{
+    display: flex;
+    margin-left: 5%;
+    margin-top: 5%;
+    text-decoration: none;
+    color: black;
+    font-size: 10px;
+  }
+  .App-headerText{
+    font-size: 10px;
+    display: inline-flex;
+    text-decoration: none;
+    color: white;
+    width: 7vh;
+  }
+  .App-headerTextArea{
+    margin-top: 5%;
+  }
+  .App-headerTextAreaBlock:nth-child(2){
+    display: none;
+  }
+  .App-headerTextAreaBlock:nth-child(3){
+    display: none;
+  }
+  .App-headerTextAreaBlock:nth-child(4){
+    display: none;
+  }
+  .App-headerTextAreaBlock:nth-child(5n){
+    display: none;
+  }
+  .App-headerTextAreaBlock:nth-child(6n){
+    display: none;
+  }
+  .App-headerTextAreaBlock:first-child{
+    margin-right: 6%;
+    margin-left: 2.5%;
+  }
+  .App-upperHeaderSlectCity{
+    display: inline-flex;
+    align-items: center;
+    margin-top: 5%;
+    font-size: 10px;
+    margin-left: 1vh;
+  }
+  .App-upperHeaderContacts{
+    display: none;
+  }
+  .App-headerCityPing {
+    width: 10px;
+    height: 10px;
+  }
+  .App-eventIcoBlock {
+    display: flex;
+    margin-left: 25vw;
+    margin-top: 3vh;
+  }
+  .App-headerEventIco{
+    margin-left: 10px;
+    width: 18px;
+    height: 18px;
+  }
+  footer{
+    display: none;
+  }
+  .App-upperSerchArea{
+    display: none;
+  }
 }
