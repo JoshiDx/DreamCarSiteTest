@@ -5,23 +5,17 @@ import {
     Route
 } from 'react-router-dom';
 import Home from "./pages/Home";
-import Navbar from "./pages/navbar";
-import catalog from "./pages/catalog";
-import FooterBar from "./pages/footerBar";
-import RegestrationLogin from "./pages/regestration-login";
-import About from "./pages/about";
+import Header from "./pages/Header";
+import Footer from "./pages/footer";
 
 function App() {
   return (
       <BrowserRouter>
-          <Navbar />
+          <Header />
           <Routes>
               <Route path={"/"} Component={Home}/>
-              <Route path={"catalog"} Component={catalog}/>
-              <Route path={"about"} Component={About}/>
-              <Route path={"login"} Component={RegestrationLogin}/>
           </Routes>
-          <FooterBar />
+          <Footer/>
       </BrowserRouter>
   );
 }

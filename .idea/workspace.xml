@@ -2,13 +2,67 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49b41c61-c50a-421c-8995-23a5b7a17ca5" name="Changes" comment="DreamCarSite">
-      <change afterPath="$PROJECT_DIR$/src/pages/getPartner.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Header.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/footer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/yandex_2d8b722dce924811.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/contacts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/regestration-login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/regestration-login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/Arrow 8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/Arrow2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/Vector.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/VibraIco.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/calc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/car-services.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/carbon-nanotube.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/carpet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/carpet2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/cartIco.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/certifacate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/colour-palitra.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/dynamic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/evaCarpet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/factory.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/factoryPic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/hamburger.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/hand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/heart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/img1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/img2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/img3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/instagram 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/lyasoped.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/main-menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/map.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/map_ping.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/more.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/moreIco.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/obivochnie.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/peoples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/phone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/plus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/right-arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/sasha.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/search.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/soundProof.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/span.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/spray.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/svg.icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/telegram 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/toolsIco.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/userIco.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/video.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/youtube 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/вк.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/about.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/catalog.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/footerBar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/getPartner.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/navbar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/regestration-login.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/App.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +99,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/WebStromProjects/DreamCarSite",
+    "last_opened_file_path": "D:/WebStromProjects/dreamcarrediz",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -87,7 +141,13 @@
       <workItem from="1683004534618" duration="16067000" />
       <workItem from="1683032109030" duration="24493000" />
       <workItem from="1683188960519" duration="24874000" />
-      <workItem from="1683452459096" duration="17894000" />
+      <workItem from="1683452459096" duration="23016000" />
+      <workItem from="1683814841963" duration="647000" />
+      <workItem from="1686232577808" duration="31000" />
+      <workItem from="1687331198406" duration="39708000" />
+      <workItem from="1687521679808" duration="1950000" />
+      <workItem from="1687870023418" duration="1760000" />
+      <workItem from="1687891474356" duration="2512000" />
     </task>
     <task id="LOCAL-00001" summary="DreamCarSite">
       <created>1682608874932</created>
@@ -103,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683208068706</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="DreamCarSite">
+      <created>1683721955332</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1683721955332</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

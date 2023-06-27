@@ -1,246 +1,209 @@
-import React, {Component} from 'react';
-import { YMaps, Map } from '@pbe/react-yandex-maps';
-import Carousel from 'nuka-carousel';
+import React from 'react';
 
 
+function addFunc() {
+    let material = document.getElementById("material").value
+    let amount = document.getElementById("value").value
+    document.secondColumn = document.getElementById("secondColumn")
+    let itogLine = document.itogLine = document.getElementById("itogLine")
 
+    let kvm = 0.34;
+    let cost = 0;
+
+    if(material == "Виброизоляция DCT ECO Vibra 1.5 мм"){
+        cost = 180
+    }
+    else if(material == "Виброизоляция DCT ECO Vibra 2 мм"){
+        cost = 200
+    }
+    else if(material == "Виброизоляция DCT ECO Vibra 3 мм"){
+        cost = 230
+    }
+    else if(material == "Виброизоляция DCT ECO Vibra 4 мм"){
+        cost = 260
+    }
+    else if(material == "Шумоизоляция DCT ECO Best 5 мм"){
+        cost = 300
+    }
+    else if(material == "Шумоизоляция DCT ECO Best 7 мм"){
+        cost = 350
+    }
+    else if(material == "Звукопоглотитель DCT ECO Scrunch 10 мм"){
+        cost = 600
+    }
+    else if(material == "Звукопоглотитель DCT ECO Scrunch Wave 15 мм"){
+        cost = 500
+    }
+
+    let itog = cost * amount;
+    let obshKvm = kvm * amount;
+    let count = 1;
+
+    let num = Number(sessionStorage.getItem('oldCena'))
+    let cenaItog = num + itog
+
+    sessionStorage.setItem('oldCena',cenaItog)
+
+    if(count != 0){
+        itogLine.innerText = `Итог: ${cenaItog} ₽`;
+    }
+
+    let div = document.createElement('div');
+    div.className = "app-bodyServicesSecondColumnItem";
+    div.innerHTML = "<div></div>";
+    div.innerHTML = `${material}<br>Листов: ${amount}<br>КВм: ${obshKvm}</br>Итог по позиции: ${itog} ₽`;
+
+    document.secondColumn.append(div);
+}
 
 export default function Home() {
     return(
-        <body className={"App-body"}>
-        <div className={"App-bodySliderImgs"}>
-            <div className={"App-bodyCarouselText"}>
-                <h6 className={"App-sliderTextF"}>КРУПНЕЙШИЙ МЕЖДУНАРОДНЫЙ</h6>
-                <h6 className={"App-sliderTextTw"}>ПОСТАВЩИК</h6>
-                <h6 className={"App-sliderTextTh"}>ТОВАРОВ ДЛЯ АВТОМОБИЛЕЙ</h6>
-            </div>
-            <div className={"App-bodyCarouselTextTw"}>
-                <h6 className={"App-bodyCarouselTextTwText"}>
-                    Технологии Dream Car опережают время.<br />
-                    Уже сегодня мы предлагаем уникальные <br />
-                    качественные материалы по доступным <br />
-                    ценам, которые не имеют аналогов
-                </h6>
-            </div>
-            <Carousel className={"App-bodyCarousel"} cellAlign={"center"} cellSpacing={"40"} slidesToShow={"1"} wrapAround = {true} withoutControls={true} autoplay={true} speed={1000} >
-                <img src={require('../images/img1.png')} className={"App-bodyCarouselSlide"} />
-                <img src={require('../images/img1.png')} className={"App-bodyCarouselSlide"} />
-                <img src={require('../images/img1.png')} className={"App-bodyCarouselSlide"} />
-            </Carousel>
-        </div>
-        <div className={"App-bodyAboutUs"}>
-            <p className={"App-bodyAboutUsTextP"}>О НАС</p>
-            <p className={"App-bodyAboutUsTextPa"}>Создаём высококачественную продукцию <br /> для лучшей жизни</p>
-            <div className={"App-bodyAboutUsBlock"}>
-                <img src={require('../images/map.png')} className={"App-bodyAboutUsBlockImg"} />
-                <div className={"App-bodyAboutUsTextBlock"}>
-                    <p className={"App-bodyAboutUsTextPb"}>20</p>
-                    <p className={"App-bodyAboutUsTextPn"}>Регионов<br />присутствия</p>
-                </div>
-            </div>
-            <div className={"App-bodyAboutUsBlock"}>
-                <img src={require('../images/hand.png')} className={"App-bodyAboutUsBlockImgHand"} />
-                <div className={"App-bodyAboutUsTextBlock"}>
-                    <p className={"App-bodyAboutUsTextPb"}>>400</p>
-                    <p className={"App-bodyAboutUsTextPn"}>Реализованных<br />партнеров</p>
-                </div>
-            </div>
-            <div className={"App-bodyAboutUsBlock"}>
-                <img src={require('../images/peoples.png')} className={"App-bodyAboutUsBlockImgPeoples"} />
-                <div className={"App-bodyAboutUsTextBlock"}>
-                    <p className={"App-bodyAboutUsTextPb"}>60</p>
-                    <p className={"App-bodyAboutUsTextPn"}>Лет<br />На рынке</p>
-                </div>
-            </div>
-            <div className={"App-bodyAboutUsBlock"}>
-                <img src={require('../images/factory.png')} className={"App-bodyAboutUsBlockImgFactory"} />
-                <div className={"App-bodyAboutUsTextBlock"}>
-                    <p className={"App-bodyAboutUsTextPb"}>>3000</p>
-                    <p className={"App-bodyAboutUsTextPn"}>м2 производственных<br />и складских помещений</p>
-                </div>
-            </div>
-        </div>
-        <div className={"App-bodyCatalog"}>
-            <p className={"App-bodyCatalogTitle"}>КАТАЛОГ</p>
-            <div className={"App-bodyCatalogPlates"}>
-                <div className={"App-bodyCatalogPlate"}>
-                    <p className={"App-bodyCatalogPlateTextF"}>01</p>
-                    <div className={"App-bodyCatalogPlateTextContainer"}>
-                        <p className={"App-bodyCatalogPlateTextTw"}>ШУМОИЗОЛЯЦИЯ</p>
-                    </div>
-                    <div className={"App-bodyCatalogPlateTextContainer"}>
-                        <p className={"App-bodyCatalogPlateTextTh"}>80 ТОВАРОВ</p>
-                    </div>
-                    <img src={require('../images/right-arrow.png')} className={"App-bodyCatalogPlateIco"} />
-                </div>
-                <div className={"App-bodyCatalogPlate"}>
-                    <p className={"App-bodyCatalogPlateTextF"}>02</p>
-                    <div className={"App-bodyCatalogPlateTextContainer"}>
-                        <p className={"App-bodyCatalogPlateTextTw"}>НАБОР ИНСТРУМЕНТОВ</p>
-                    </div>
-                    <div className={"App-bodyCatalogPlateTextContainer"}>
-                        <p className={"App-bodyCatalogPlateTextTh"}>14 ТОВАРОВ</p>
-                    </div>
-                    <img src={require('../images/right-arrow.png')} className={"App-bodyCatalogPlateIco"} />
-                </div>
-                <div className={"App-bodyCatalogPlate"}>
-                    <p className={"App-bodyCatalogPlateTextF"}>03</p>
-                    <div className={"App-bodyCatalogPlateTextContainer"}>
-                        <p className={"App-bodyCatalogPlateTextTw"}>КОВРИКИ EVA</p>
-                    </div>
-                    <div className={"App-bodyCatalogPlateTextContainer"}>
-                        <p className={"App-bodyCatalogPlateTextTh"}>56 ТОВАРОВ</p>
-                    </div>
-                    <img src={require('../images/right-arrow.png')} className={"App-bodyCatalogPlateIco"} />
-                </div>
-                <div className={"App-bodyCatalogPlate"}>
-                    <p className={"App-bodyCatalogPlateTextF"}>04</p>
-                    <div className={"App-bodyCatalogPlateTextContainer"}>
-                        <p className={"App-bodyCatalogPlateTextTw"}>КАРБОН</p>
-                    </div>
-                    <div className={"App-bodyCatalogPlateTextContainer"}>
-                        <p className={"App-bodyCatalogPlateTextTh"}>37 ТОВАРОВ</p>
-                    </div>
-                    <img src={require('../images/right-arrow.png')} className={"App-bodyCatalogPlateIco"} />
-                </div>
-                <div className={"App-bodyCatalogPlate"}>
-                    <p className={"App-bodyCatalogPlateTextF"}>05</p>
-                    <div className={"App-bodyCatalogPlateTextContainer"}>
-                        <p className={"App-bodyCatalogPlateTextTw"}>ОБИВОЧНЫЕ МАТЕРИАЛЫ</p>
-                    </div>
-                    <div className={"App-bodyCatalogPlateTextContainer"}>
-                        <p className={"App-bodyCatalogPlateTextTh"}>120 ТОВАРОВ</p>
-                    </div>
-                    <img src={require('../images/right-arrow.png')} className={"App-bodyCatalogPlateIco"} />
-                </div>
-            </div>
-            <div className={"App-bodyCatalogShowMore"}>
-                <p className={"App-bodyCatalogShowMoreText"}>
-                    СМОТРЕТЬ ВСЕ
-                </p>
-            </div>
-        </div>
-        <div className={"App-bodyServices"}>
-            <p className={"App-bodyServicesTitel"}>СЕРВИСЫ</p>
-            <div className={"App-bodyServicesPlates"}>
-                <div className={"App-bodyServicesPlate"}>
-                    <p className={"App-bodyServicesPlateTextF"}>РАСЧЕТ МАТЕРИАЛОВ</p>
-                    <img src={require('../images/calc.png')} className={"App-bodyServicesPlateImg"} />
-                    <p className={"App-bodyServicesPlateTextTw"}>Узнайте необходимое количество<br />
-                        материалов на свою модель авто</p>
-                    <div className={"App-bodyServicesPlateShowMore"}>
-                        <p className={"App-bodyServicesPlateShowMoreText"} >ПОДРОБНЕЕ</p>
-                        <img src={require('../images/Arrow2.png')} className={"App-bodyServicesShowMoreImg"} />
+        <body className={"app-bodyHome"}>
+            <div className={"app-bodyGoodsArea"} id={"materailsDesk"}>
+                <div className={"app-bodyGoods"}>
+                    <img src={require("../images/not_found.png")} className={"app-goodImg"}/>
+                    <div className={"app-goodsDescriptionBlock"}>
+                        <p className={"app-goodsDescriptionTitle"}>
+                            Виброизоляция DCT ECO Vibra 1.5 мм
+                        </p>
+                        <p className={"app-goodsDescription"}>
+                            Виброизоляция DCT ECO Vibra 1.5 мм - легкий и эластичный вибропоглощающий материал, мастика с фольгированным покрытием. Как правило, используется для обработки крыши, двери, крышка капота и багажника, пластиковые подкрылки.
+                            <br/> <br/> <br/> Цена: 180 ₽
+                        </p>
                     </div>
                 </div>
-                <div className={"App-bodyServicesPlate"}>
-                    <p className={"App-bodyServicesPlateTextF"}>СОЗДАЙТЕ СВОЙ КОВРИК</p>
-                    <img src={require('../images/colour-palitra.png')} className={"App-bodyServicesPlateImg"} />
-                    <p className={"App-bodyServicesPlateTextTw"}>В нашем магазине в подарок вы <br />
-                        можете подобрать эва автоковры</p>
-                    <div className={"App-bodyServicesPlateShowMore"}>
-                        <p className={"App-bodyServicesPlateShowMoreText"}>ПОДРОБНЕЕ</p>
-                        <img src={require('../images/Arrow2.png')} className={"App-bodyServicesShowMoreImg"} />
+                <div className={"app-bodyGoods"}>
+                    <img src={require("../images/not_found.png")} className={"app-goodImg"}/>
+                    <div className={"app-goodsDescriptionBlock"}>
+                        <p className={"app-goodsDescriptionTitle"}>
+                            Виброизоляция DCT ECO Vibra 2 мм
+                        </p>
+                        <p className={"app-goodsDescription"}>
+                            Виброизоляция DCT ECO Vibra 2 мм - легкий и эластичный вибропоглощающий материал, мастика с фольгированным покрытием. Как правило, используется для обработки крыши, двери, крышка капота и багажника, пластиковые подкрылки.
+                            <br/> <br/> <br/> Цена: 200 ₽
+                        </p>
+                    </div>
+                </div>
+                <div className={"app-bodyGoods"}>
+                    <img src={require("../images/not_found.png")} className={"app-goodImg"}/>
+                    <div className={"app-goodsDescriptionBlock"}>
+                        <p className={"app-goodsDescriptionTitle"}>
+                            Виброизоляция DCT ECO Vibra 3 мм
+                        </p>
+                        <p className={"app-goodsDescription"}>
+                            Виброизоляция DCT ECO Vibra 3 мм - эластичный вибропоглощающий материал, мастика с фольгированным покрытием. Как правило, используется для обработки пола салона, пола багажника и дверей.
+                            <br/> <br/> <br/> <br/> <br/>Цена: 230 ₽
+                        </p>
+                    </div>
+                </div>
+                <div className={"app-bodyGoods"}>
+                    <img src={require("../images/not_found.png")} className={"app-goodImg"}/>
+                    <div className={"app-goodsDescriptionBlock"}>
+                        <p className={"app-goodsDescriptionTitle"}>
+                            Виброизоляция DCT ECO Vibra 4 мм
+                        </p>
+                        <p className={"app-goodsDescription"}>
+                            Виброизоляция DCT ECO Vibra 4 мм - эластичный вибропоглощающий материал, мастика с фольгированным покрытием. Как правило, используется для обработки щитка моторного отсека и колесных арок.
+                            <br/> <br/> <br/> <br/> <br/>Цена: 260 ₽
+                        </p>
+                    </div>
+                </div>
+                <div className={"app-bodyGoods"}>
+                    <img src={require("../images/not_found.png")} className={"app-goodImg"}/>
+                    <div className={"app-goodsDescriptionBlock"}>
+                        <p className={"app-goodsDescriptionTitle"}>
+                            Шумоизоляция DCT ECO Best 5 мм
+                        </p>
+                        <p className={"app-goodsDescription"}>
+                            Шумоизоляция DCT ECO Best 5 мм - обеспечивает звукоизоляцию до 24 дБ. Влагозащищенное исполнение. DCT ECO Best – единственный облегченный мембранный материал, разработанный специально для обработки крыши, двери, крышка капота и багажника, пластиковые подкрылки автомобиля.
+                            <br/> <br/> Цена: 300 ₽
+                        </p>
+                    </div>
+                </div>
+                <div className={"app-bodyGoods"}>
+                    <img src={require("../images/not_found.png")} className={"app-goodImg"}/>
+                    <div className={"app-goodsDescriptionBlock"}>
+                        <p className={"app-goodsDescriptionTitle"}>
+                            Шумоизоляция DCT ECO Best 7 мм
+                        </p>
+                        <p className={"app-goodsDescription"}>
+                            Шумоизоляция DCT ECO Best 7 мм - обеспечивает звукоизоляцию до 24 дБ. Влагозащищенное исполнение. DCT ECO Best – единственный облегченный мембранный материал, разработанный специально для обработки крыши, двери, крышка капота и багажника, пластиковые подкрылки автомобиля.
+                            <br/> <br/> Цена: 300 ₽
+                        </p>
+                    </div>
+                </div>
+                <div className={"app-bodyGoods"}>
+                    <img src={require("../images/not_found.png")} className={"app-goodImg"}/>
+                    <div className={"app-goodsDescriptionBlock"}>
+                        <p className={"app-goodsDescriptionTitle"}>
+                            Шумоизоляция DCT ECO Best 7 мм
+                        </p>
+                        <p className={"app-goodsDescription"}>
+                            Шумоизоляция DCT ECO Best 7 мм - обеспечивает звукоизоляцию до 24 дБ. Влагозащищенное исполнение. DCT ECO Best – единственный облегченный мембранный материал, разработанный специально для обработки крыши, двери, крышка капота и багажника, пластиковые подкрылки автомобиля.
+                            <br/> <br/> Цена: 350 ₽
+                        </p>
+                    </div>
+                </div>
+                <div className={"app-bodyGoods"}>
+                    <img src={require("../images/not_found.png")} className={"app-goodImg"}/>
+                    <div className={"app-goodsDescriptionBlock"}>
+                        <p className={"app-goodsDescriptionTitle"}>
+                            Звукопоглотитель DCT ECO Scrunch 10 мм
+                        </p>
+                        <p className={"app-goodsDescription"}>
+                            Звукопоглотитель DCT ECO Scrunch 10 мм - Материал применяется для устранения скрипов панелей салона автомобиля, путем проклейки между декоративными элементами и кузовом автомобиля.  Предназначен для повышения акустической комфортности в кабине транспортных средств и пассажирском салоне.
+                            <br/> <br/> Цена: 350 ₽
+                        </p>
+                    </div>
+                </div>
+                <div className={"app-bodyGoods"}>
+                    <img src={require("../images/not_found.png")} className={"app-goodImg"}/>
+                    <div className={"app-goodsDescriptionBlock"}>
+                        <p className={"app-goodsDescriptionTitle"}>
+                            Звукопоглотитель DCT ECO Scrunch Wave 15 мм
+                        </p>
+                        <p className={"app-goodsDescription"}>
+                            Звукопоглотитель DCT ECO Scrunch Wave 15 мм - Материал применяется для устранения скрипов панелей салона автомобиля, путем проклейки между декоративными элементами и кузовом автомобиля.  Предназначен для повышения акустической комфортности в кабине транспортных средств и пассажирском салоне.
+                            <br/> <br/> Цена: 350 ₽
+                        </p>
                     </div>
                 </div>
             </div>
-        </div>
-        <div className={"App-bodyReq"}>
-            <p className={"App-bodyReqTitle"}>ПРЕИМУЩЕСТВА</p>
-            <p className={"App-bodyReqTitleTw"}>ОСНОВНЫЕ ПЛЮСЫ КОМПАНИИ</p>
-            <div className={"App-bodyReqPlates"}>
-                <div className={"App-bodyReqPlateBlock"}>
-                    <div className={"App-bodyReqPlate"}>
-                        <p className={"App-bodyReqPlateTextF"}>01/</p>
-                        <p className={"App-bodyReqPlateTextTw"}>БОЛЕЕ 12 ЛЕТ <br /> ПРОДУКТИВНОЙ РАБОТЫ</p>
+            <div className={"app-bodyServices"} id={"calculate"}>
+                <div className={"app-bodyServicesFirstColumn"}>
+                    <p className={"app-bodyServicesFirstColumnTitle"}>
+                        Калькулятор
+                    </p>
+                    <div className={"app-bodyServicesFirstColumnItem"}>
+                        <p className={"app-bodyServicesFirstColumnItemText"}>Материал:</p>
+                        <select className={"app-bodyServicesSelection"} placeholder={"Выберите товар"} id={"material"}>
+                            <optgroup label={"Виброизоляция:"} className={"app-bodyServicesSelectionGroup"}>
+                                <option className={"app-bodyServicesSelectionOpt"}>Виброизоляция DCT ECO Vibra 1.5 мм</option>
+                                <option className={"app-bodyServicesSelectionOpt"}>Виброизоляция DCT ECO Vibra 2 мм</option>
+                                <option className={"app-bodyServicesSelectionOpt"}>Виброизоляция DCT ECO Vibra 3 мм</option>
+                                <option className={"app-bodyServicesSelectionOpt"}>Виброизоляция DCT ECO Vibra 4 мм</option>
+                            </optgroup>
+                            <optgroup label={"Шумоизоляция:"} className={"app-bodyServicesSelectionGroup"}>
+                                <option className={"app-bodyServicesSelectionOpt"}>Шумоизоляция DCT ECO Best 5 мм</option>
+                                <option className={"app-bodyServicesSelectionOpt"}>Шумоизоляция DCT ECO Best 7 мм</option>
+                            </optgroup>
+                            <optgroup label={"Звукопоглотители:"} className={"app-bodyServicesSelectionGroup"}>
+                                <option className={"app-bodyServicesSelectionOpt"}>Звукопоглотитель DCT ECO Scrunch 10 мм</option>
+                                <option className={"app-bodyServicesSelectionOpt"}>Звукопоглотитель DCT ECO Scrunch Wave 15 мм</option>
+                            </optgroup>
+                        </select>
                     </div>
-                    <div className={"App-bodyReqPlateFooter"}>
-                        <div className={"App-bodyReqPlateFooterPack"}>
-                            <p className={"App-bodyReqPlateFooterPackText"}>Благодаря приобретенному <br />
-                                опыту предугадываем желания <br />
-                                покупателей и обновляем <br />
-                                ассортимент</p>
-                        </div>
+                    <div className={"app-bodyServicesFirstColumnItem"}>
+                        <p className={"app-bodyServicesFirstColumnItemText"}>Колличество:</p>
+                        <input type={"text"} className={"app-bodyServicesSelectionCount"} id={"value"}/>
+                        <p className={"app-bodyServicesFirstColumnItemText"}>(в листах)</p>
                     </div>
+                    <input type={"button"} value={"Добавить в итог"} className={"app-bodyServicesGetGood"} onClick={addFunc}/>
                 </div>
-                <div className={"App-bodyReqPlateBlock"}>
-                    <div className={"App-bodyReqPlate"}>
-                        <p className={"App-bodyReqPlateTextF"}>02/</p>
-                        <p className={"App-bodyReqPlateTextTw"}>ДОСТУПНЫЕ ЦЕН <br />
-                            И УСЛУГИ</p>
-                    </div>
-                    <div className={"App-bodyReqPlateFooter"}>
-                        <div className={"App-bodyReqPlateFooterPack"}>
-                            <p className={"App-bodyReqPlateFooterPackText"}>Благодаря приобретенному <br />
-                                опыту предугадываем желания <br />
-                                покупателей и обновляем <br />
-                                ассортимент</p>
-                        </div>
-                    </div>
-                </div>
-                <div className={"App-bodyReqPlateBlock"}>
-                    <div className={"App-bodyReqPlate"}>
-                        <p className={"App-bodyReqPlateTextF"}>03/</p>
-                        <p className={"App-bodyReqPlateTextTw"}>ОПЕРАТИВНОСТЬ <br /> ВЫПОЛНЕНИЯ ЗАКАЗОВ</p>
-                    </div>
-                    <div className={"App-bodyReqPlateFooter"}>
-                        <div className={"App-bodyReqPlateFooterPack"}>
-                            <p className={"App-bodyReqPlateFooterPackText"}>Благодаря приобретенному <br />
-                                опыту предугадываем желания <br />
-                                покупателей и обновляем <br />
-                                ассортимент</p>
-                        </div>
-                    </div>
-                </div>
-                <div className={"App-bodyReqPlateBlock"}>
-                    <div className={"App-bodyReqPlate"}>
-                        <p className={"App-bodyReqPlateTextF"}>04/</p>
-                        <p className={"App-bodyReqPlateTextTw"}>ВЫСОКОЕ КАЧЕСТВО И<br /> ТЕХНОЛОГИЙ ПРОИЗВОДСТВА</p>
-                    </div>
-                    <div className={"App-bodyReqPlateFooter"}>
-                        <div className={"App-bodyReqPlateFooterPack"}>
-                            <p className={"App-bodyReqPlateFooterPackText"}>Благодаря приобретенному <br />
-                                опыту предугадываем желания <br />
-                                покупателей и обновляем <br />
-                                ассортимент</p>
-                        </div>
-                    </div>
+                <div className={"app-bodyServicesSecondColumn"} id={"secondColumn"}>
+                    <p className={"app-bodyServicesSecondColumnTitle"} id={"itogLine"}>Итог:</p>
                 </div>
             </div>
-        </div>
-        <div className={"App-bodyMapYandex"}>
-            <p className={"App-bodyMapYandexTableTitle"}>РЕГИОНЫ ПРИСУТСТВИЯ</p>
-            <div className={"App-bodyMapYandexBody"}>
-                <div className={"App-bodyMapYandexTable"}>
-                    <div className={"App-bodyMapYandexTableTab"}>
-                        <p className={"App-bodyMapYandexTableText"}  >КАЗАХСТАН</p>
-                    </div>
-                    <div className={"App-bodyMapYandexTableTab"}>
-                        <p className={"App-bodyMapYandexTableText"}>РОССИЯ</p>
-                    </div>
-                    <div className={"App-bodyMapYandexTableTab"} >
-                        <p className={"App-bodyMapYandexTableText"} >АРМЕНИЯ</p>
-                    </div>
-                    <div className={"App-bodyMapYandexTableTab"}>
-                        <p className={"App-bodyMapYandexTableText"}>УЗБЕКИСТАН</p>
-                    </div>
-                    <div className={"App-bodyMapYandexTableTab"}>
-                        <p className={"App-bodyMapYandexTableText"}>БЕЛОРУСЬ</p>
-                    </div>
-                    <div className={"App-bodyMapYandexTableTab"}>
-                        <p className={"App-bodyMapYandexTableText"}>УКРАИНА</p>
-                    </div>
-                    <div className={"App-bodyMapYandexTableTab"}>
-                        <p className={"App-bodyMapYandexTableText"}>ИРАН</p>
-                    </div>
-                </div>
-                <div id={"MapYam"} className={"App-bodyMapYandexMap"}>
-                    <YMaps>
-                        <Map defaultState={{center:[55.7522, 37.6156],zoom:7}} width={"1050px"} height={"600px"} />
-                    </YMaps>
-                </div>
-            </div>
-        </div>
         </body>
     );
 }
